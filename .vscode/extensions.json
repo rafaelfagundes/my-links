@@ -1,0 +1,21 @@
+{
+  "recommendations": [
+    "catppuccin.catppuccin-vsc",
+    "catppuccin.catppuccin-vsc-icons",
+    "esbenp.prettier-vscode",
+    "visualstudioexptteam.vscodeintellicode",
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "formulahendry.auto-rename-tag",
+    "christian-kohler.path-intellisense",
+    "formulahendry.auto-close-tag",
+    "dsznajder.es7-react-js-snippets",
+    "bradlc.vscode-tailwindcss",
+    "naumovs.color-highlight",
+    "usernamehw.errorlens",
+    "yoavbls.pretty-ts-errors",
+    "planbcoding.vscode-react-refactor",
+    "meganrogge.template-string-converter",
+    "stivo.tailwind-fold"
+  ]
+}
