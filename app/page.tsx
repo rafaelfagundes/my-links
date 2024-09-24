@@ -278,6 +278,7 @@ Message: ${data.message}`,
           </motion.div>
         )}
       </AnimatePresence>
+      <div className="h-10"></div>
     </div>
   );
 }
