@@ -49,17 +49,17 @@ export default function Home() {
     {
       name: "Portfolio",
       icon: <Globe className="w-5 h-5 mr-2" />,
-      url: "https://johnfarah.com",
+      url: "https://rafaelfagundes.com",
     },
     {
       name: "GitHub",
       icon: <GithubLogo className="w-5 h-5 mr-2" />,
-      url: "https://github.com/johnfarah",
+      url: "https://github.com/rafaelfagundes",
     },
     {
       name: "LinkedIn",
       icon: <LinkedinLogo className="w-5 h-5 mr-2" />,
-      url: "https://linkedin.com/in/johnfarah",
+      url: "https://linkedin.com/in/rafaelcfl",
     },
     {
       name: "Instagram",
@@ -69,7 +69,7 @@ export default function Home() {
     {
       name: "Email",
       icon: <Envelope className="w-5 h-5 mr-2" />,
-      url: "mailto:john@example.com",
+      url: "mailto:example@outlook.com",
     },
     // {
     //   name: "Mobile App",
