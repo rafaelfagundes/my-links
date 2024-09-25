@@ -125,18 +125,28 @@ Message: ${data.message}`,
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 transition-colors duration-300 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 transition-colors duration-300 flex items-center justify-center px-4 pt-4 pb-10">
       <motion.div
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
+        initial={{ opacity: 0, scale: 0, y: 400 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         className="w-full max-w-md backdrop-blur-xl bg-white dark:bg-gray-800 bg-opacity-70 dark:bg-opacity-50 rounded-3xl shadow-2xl overflow-hidden border border-gray-200 dark:border-gray-700"
       >
         <div className="p-8 text-center relative">
-          <div className="absolute top-4 right-4 flex gap-2 items-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="absolute top-4 right-4 flex gap-2 items-center"
+          >
             <ThemeSwitcher></ThemeSwitcher>
-          </div>
-          <div className="w-32 h-32 mx-auto mb-6 overflow-hidden rounded-full border-4 border-gray-300 dark:border-gray-600 shadow-inner">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0, y: 200 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="w-32 h-32 mx-auto mb-6 overflow-hidden rounded-full border-4 border-gray-300 dark:border-gray-600 shadow-inner"
+          >
             <Image
               alt="John Farah"
               className="object-cover w-full h-full"
@@ -148,20 +158,35 @@ Message: ${data.message}`,
               }}
               width="128"
             />
-          </div>
-          <MainTitle>Rafael Fagundes</MainTitle>
-
-          <p className="text-xl text-gray-600 dark:text-gray-300 font-medium mb-2 mt-2">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 300, scale: 0 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <MainTitle>Rafael Fagundes</MainTitle>
+          </motion.div>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="text-xl text-gray-600 dark:text-gray-300 font-medium mt-2"
+          >
             Full Stack & Mobile Developer
-            <br />
-            <span className="text-sm text-gray-500 dark:text-gray-400">
-              Based in Ontario, Canada
-            </span>
-          </p>
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="text-sm text-gray-500 dark:text-gray-400 mb-2 mt-3"
+          >
+            Based in Ontario, Canada
+          </motion.p>
+
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.3 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
           >
             <Emoji>🇨🇦</Emoji>
           </motion.div>
@@ -171,10 +196,10 @@ Message: ${data.message}`,
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 + index * 0.15 }}
+                transition={{ delay: 0.3 + index * 0.1 }}
               >
                 <Button
-                  className="w-full text-left justify-start min-h-12 text-gray-700 dark:text-gray-200 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 border-none "
+                  className="rounded-full w-full text-left justify-start min-h-12 text-gray-700 dark:text-gray-200 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 border-none"
                   asChild
                   variant="secondary"
                   onClick={link.action ? link.action : undefined}
@@ -186,7 +211,7 @@ Message: ${data.message}`,
                     className="py-6"
                   >
                     {link.icon}
-                    <span className="font-bold">{link.name}</span>
+                    <span className="font-medium">{link.name}</span>
                   </a>
                 </Button>
               </motion.div>
