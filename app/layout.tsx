@@ -6,7 +6,7 @@ import "./globals.css";
 const sansSerif = SansSerif({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
-  title: "Rafeel Fagundes",
+  title: "Rafael Fagundes",
   description: "Check out my social links",
 };
 
